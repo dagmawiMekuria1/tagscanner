@@ -1,0 +1,47 @@
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Supabase local
+.supabase/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Build artifacts (should not exist, but just in case)
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# Coverage
+coverage/
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
