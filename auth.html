@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapHunt - Sign In</title>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body>
+  <main class="auth-page">
+    <div class="auth-container fade-in">
+      <!-- Logo -->
+      <div class="auth-logo">
+        <span class="logo-icon">&#x1F3AF;</span>
+        <h1 class="logo-text">SnapHunt</h1>
+        <p class="auth-tagline">AI-Powered Equipment Capture</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="sign-in">Sign In</button>
+        <button class="auth-tab" data-tab="sign-up">Sign Up</button>
+      </div>
+
+      <!-- Sign In Panel -->
+      <div id="sign-in-panel" class="auth-panel active">
+        <form id="sign-in-form" class="auth-form" novalidate>
+          <div class="form-group">
+            <label for="signInEmail" class="form-label">Email</label>
+            <input type="email" id="signInEmail" class="form-input" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="signInPassword" class="form-label">Password</label>
+            <input type="password" id="signInPassword" class="form-input" placeholder="Your password" required>
+          </div>
+          <div id="sign-in-error" class="auth-error" hidden></div>
+          <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+        </form>
+      </div>
+
+      <!-- Sign Up Panel -->
+      <div id="sign-up-panel" class="auth-panel" hidden>
+        <form id="sign-up-form" class="auth-form" novalidate>
+          <div class="form-group">
+            <label for="signUpEmail" class="form-label">Email</label>
+            <input type="email" id="signUpEmail" class="form-input" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="signUpPassword" class="form-label">Password</label>
+            <input type="password" id="signUpPassword" class="form-input" placeholder="Min 6 characters" required minlength="6">
+          </div>
+          <div class="form-group">
+            <label for="signUpConfirm" class="form-label">Confirm Password</label>
+            <input type="password" id="signUpConfirm" class="form-input" placeholder="Confirm password" required minlength="6">
+          </div>
+          <div id="sign-up-error" class="auth-error" hidden></div>
+          <div id="sign-up-success" class="auth-success" hidden></div>
+          <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/auth-page.js" type="module"></script>
+</body>
+</html>
