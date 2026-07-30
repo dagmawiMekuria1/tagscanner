@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapHunt - Inventory</title>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/inventory.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">&#x1F3AF;</span>
+        <span class="logo-text">SnapHunt</span>
+      </a>
+      <div class="nav-links desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="capture.html" class="nav-link">Capture</a>
+        <a href="inventory.html" class="nav-link active">Inventory</a>
+        <button id="signOutBtn" class="btn btn-ghost btn-sm">Sign Out</button>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="capture.html" class="nav-link">Capture</a>
+      <a href="inventory.html" class="nav-link active">Inventory</a>
+      <button id="mobileSignOutBtn" class="btn btn-ghost btn-sm">Sign Out</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="inventory-container fade-in">
+      <!-- Header -->
+      <div class="inventory-header">
+        <h1 class="page-title">Equipment Inventory</h1>
+        <span class="inventory-count">0 items</span>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="inventory-toolbar">
+        <div class="search-wrapper">
+          <input type="text" class="search-input form-input" placeholder="Search equipment...">
+        </div>
+        <button id="export-btn" class="btn btn-ghost btn-sm">
+          <span>&#x1F4E5;</span> Export
+        </button>
+      </div>
+
+      <!-- Table -->
+      <div class="table-wrapper">
+        <table class="inventory-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th data-sort="name">Name <span class="sort-icon">&#x25B2;</span></th>
+              <th data-sort="category">Category <span class="sort-icon">&#x25B2;</span></th>
+              <th data-sort="condition">Condition <span class="sort-icon">&#x25B2;</span></th>
+              <th data-sort="created_at">Date <span class="sort-icon">&#x25B2;</span></th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="inventory-body">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Loading State -->
+      <div class="table-loading">
+        <div class="spinner"></div>
+        <p>Loading inventory...</p>
+      </div>
+
+      <!-- Empty State -->
+      <div class="table-empty" hidden>
+        <span class="empty-icon">&#x1F4E6;</span>
+        <p>No equipment found. Start by capturing your first item!</p>
+        <a href="capture.html" class="btn btn-primary">Capture Equipment</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/inventory-page.js" type="module"></script>
+</body>
+</html>
